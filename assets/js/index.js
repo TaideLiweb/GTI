@@ -1,6 +1,15 @@
 // 跳出 Line 內部瀏覽器
-window.location.href =
-  window.location.origin + window.location.pathname + "?openExternalBrowser=1"
+;(function () {
+  const url = new URL(window.location.href)
+  const params = url.searchParams
+
+  if (!params.has("openExternalBrowser")) {
+    // 加上參數
+    params.set("openExternalBrowser", "1")
+
+    window.location.replace(`${url.origin}${url.pathname}?${params.toString()}`)
+  }
+})()
 
 window.addEventListener("load", () => {
   const hamburger = document.querySelector(".hamburger")
