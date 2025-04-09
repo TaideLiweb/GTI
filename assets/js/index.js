@@ -1,3 +1,7 @@
+// 跳出 Line 內部瀏覽器
+window.location.href =
+  window.location.origin + window.location.pathname + "?openExternalBrowser=1"
+
 window.addEventListener("load", () => {
   const hamburger = document.querySelector(".hamburger")
   const mobileMenu = document.querySelector(".mobile-menu")
