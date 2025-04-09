@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GTI:Quantum Arbitrage</title>
+    <meta
+      name="description"
+      content="GTI 是金融科技與量化套利的交匯點，我們的技術如同曲軸引擎，推動資本超越傳統市場的束縛，開啟全新的金融維度。我們的願景不只是套利，而是改變套利的定義——如同探索宇宙，我們不只尋找機會，我們創造機會。"
+    />
+    <!-- 網頁標題（分享卡片的主標題） -->
+    <meta property="og:title" content="GTI:Quantum Arbitrage" />
+
+    <!-- 網頁描述（卡片下方文字） -->
+    <meta
+      property="og:description"
+      content="GTI 是金融科技與量化套利的交匯點，我們的技術如同曲軸引擎，推動資本超越傳統市場的束縛，開啟全新的金融維度。我們的願景不只是套利，而是改變套利的定義——如同探索宇宙，我們不只尋找機會，我們創造機會。"
+    />
+
+    <!-- (待填入) 網頁網址（建議填入實際 domain） -->
+    <meta property="og:url" content="" />
+
+    <!-- 頁面主圖（分享時會顯示的縮圖） -->
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- 網站名稱 -->
+    <meta property="og:site_name" content="GTI:Quantum Arbitrage" />
+
+    <!-- 頁面類型（website、article、video、product…）-->
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" type="image/png" href="./assets/images/GTI-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header
+      class="fixed left-0 top-0 z-10 flex w-full items-center justify-between p-[30px]"
+    >
+      <h1>
+        <img class="w-[85px]" src="./assets/images/logo.png" alt="GTI" />
+      </h1>
+      <nav>
+        <ul class="hidden md:flex md:gap-[20px] lg:gap-[60px]">
+          <li class="nav-item">
+            <a class="block">企業概念</a>
+          </li>
+          <li class="nav-item">
+            <a class="block">企業價值</a>
+          </li>
+          <li class="nav-item">
+            <a class="block">交易策略</a>
+          </li>
+          <li class="nav-item">
+            <a class="block">企業文化</a>
+          </li>
+          <li class="nav-item">
+            <a class="block">關於 GTI</a>
+          </li>
+          <li class="nav-item">
+            <a class="block">GTI 宇宙史</a>
+          </li>
+          <li class="nav-item">
+            <a class="block">加入 GTI</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hamburger">
+        <span class="h-[3px] w-full bg-white"></span>
+        <span class="h-[3px] w-2/3 bg-white"></span>
+        <span class="h-[3px] w-1/3 bg-white"></span>
+      </div>
+      <div class="mobile-menu">
+        <div class="close-btn"></div>
+        <div class="roboto-condensed-regular text-3xl text-white">Menu</div>
+        <ul class="flex flex-col gap-[30px]">
+          <li class="nav-item text-xl">
+            <a class="block">企業概念</a>
+          </li>
+          <li class="nav-item text-xl">
+            <a class="block">企業價值</a>
+          </li>
+          <li class="nav-item text-xl">
+            <a class="block">交易策略</a>
+          </li>
+          <li class="nav-item text-xl">
+            <a class="block">企業文化</a>
+          </li>
+          <li class="nav-item text-xl">
+            <a class="block">關於 GTI</a>
+          </li>
+          <li class="nav-item text-xl">
+            <a class="block">GTI 宇宙史</a>
+          </li>
+          <li class="nav-item text-xl">
+            <a class="block">加入 GTI</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="relative mt-[86px] h-[calc(100dvh-86px)] overflow-hidden">
+      <div class="absolute h-full w-full">
+        <img
+          class="h-full w-full object-cover"
+          src="assets/images/section-1-bg.png"
+          width="100%"
+          alt=""
+          role="presentation"
+        />
+      </div>
+      <div
+        class="relative z-[1] flex h-full w-full flex-col items-center justify-center"
+      >
+        <h1
+          class="linear-gradient-text roboto-condensed-black pb-4 text-center text-6xl md:text-7xl"
+        >
+          GTI:Quantum Arbitrage
+        </h1>
+        <p class="text-xl text-white md:text-3xl">
+          「時間是相對的，市場也是。」
+        </p>
+      </div>
+      <div
+        class="absolute bottom-0 left-[50%] flex -translate-x-1/2 flex-col items-center gap-3"
+      >
+        <img
+          class="animate-bounce-slow"
+          src="assets/images/scroll-tip.png"
+          width="100%"
+          alt="scroll-down"
+        />
+        <div class="h-[40px] w-[1px] bg-white"></div>
+      </div>
+    </section>
+    <section id="anchor-point-1" class="md:h-[900px]">
+      <div class="container flex items-center">
+        <div
+          class="animate-float-xy-1 absolute left-[-8%] top-[10%] w-[140px] md:left-[28%] md:top-[20%] md:w-[20%] lg:top-[15%]"
+        >
+          <img
+            src="assets/images/section-1-img-1.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="animate-float-xy-3 absolute right-[0%] top-[30%] hidden w-[400px] md:block lg:top-[20%] lg:w-[600px]"
+        >
+          <img
+            src="assets/images/section-1-img-2.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="rocket absolute bottom-[-15%] left-[20%] w-[120px] md:w-[200px]"
+        >
+          <img
+            src="assets/images/section-1-img-3.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div class="flex flex-col md:w-[400px] md:items-start">
+          <div
+            class="mb-[30px] flex flex-col items-center justify-start gap-1 md:items-start md:gap-3"
+          >
+            <h2 class="linear-gradient-text section-title">企業概念</h2>
+            <span class="roboto-condensed-regular section-subtitle"
+              >THE INTERSTELLAR MISSION</span
+            >
+          </div>
+          <p class="leading-8 text-white">
+            在金融宇宙的浩瀚深空中，GTI
+            量化套利資本如同一艘探索星艦，突破市場維度的邊界，穿梭於數據的蟲洞之中，尋找套利的時空裂縫與奇異點。我們的任務不只是交易，而是理解市場的本質——在混沌的金融黑洞中，找到穩定的運行軌道，以精密的數學模型與人工智慧導航，探索前所未見的機會。
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="anchor-point-2" class="relative overflow-hidden md:h-[900px]">
+      <div class="absolute bottom-[-23%] h-full w-full">
+        <img
+          class="h-full w-full object-cover"
+          src="assets/images/section-2-bg.png"
+          width="100%"
+          alt=""
+          role="presentation"
+        />
+      </div>
+      <div class="container">
+        <div
+          class="animate-float-xy-1 absolute hidden lg:left-0 lg:top-[45%] lg:block lg:w-[140px]"
+        >
+          <img
+            src="assets/images/section-2-img-1.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="animate-float-x-2 absolute right-[-20%] top-[10%] w-[160px] md:top-[33%] md:w-[200px] lg:right-[10%]"
+        >
+          <img
+            src="assets/images/section-2-img-2.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="animate-float-y-2 absolute hidden lg:right-[-5%] lg:top-[55%] lg:block lg:w-[130px]"
+        >
+          <img
+            src="assets/images/section-2-img-3.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="flex flex-col items-center justify-center md:mx-auto md:w-[520px]"
+        >
+          <div
+            class="mb-[30px] flex flex-col items-center justify-start gap-1 md:gap-3"
+          >
+            <h2 class="linear-gradient-text section-title">企業價值</h2>
+            <span class="roboto-condensed-regular section-subtitle"
+              >TIME AND GRAVITY- Value</span
+            >
+          </div>
+          <p class="leading-8 text-white md:text-center">
+            「套利，如同引力，無處不在，卻難以察覺。」<br />
+            市場的波動如時空的扭曲，套利機會隱匿於高維數據之間。GTI
+            以嚴謹的科學思維與高度演化的演算法，撐起套利的時空橋樑，確保資本的每一次運行都經過精確計算，讓投資人獲得穩健的回報，如恆星運行般可靠。
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="anchor-point-3" class="relative overflow-hidden">
+      <div class="container">
+        <div
+          class="absolute left-[-12%] top-[23%] w-[100px] md:left-[12%] md:top-[13%] md:w-[150px]"
+        >
+          <img
+            src="assets/images/section-3-img-1.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="absolute left-[10%] top-[45%] w-[110px] md:left-[-14%] md:top-[25%] md:w-[200px]"
+        >
+          <img
+            src="assets/images/section-3-img-2.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="absolute left-[-4%] top-[55%] w-[120px] md:left-[-4%] md:top-[45%] md:w-[170px]"
+        >
+          <img
+            src="assets/images/section-3-img-3.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="absolute left-[13%] top-[65%] w-[120px] md:left-[-10%] md:top-[68%]"
+        >
+          <img
+            src="assets/images/section-3-img-4.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="absolute left-[8%] top-[80%] w-[120px] md:top-[75%] md:w-[100px]"
+        >
+          <img
+            src="assets/images/section-3-img-5.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="absolute right-[-11%] top-[15%] w-[100px] md:right-[10%] md:top-[13%]"
+        >
+          <img
+            src="assets/images/section-3-img-6.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="absolute right-[-7%] top-[35%] w-[100px] md:right-[-6%] md:top-[22%]"
+        >
+          <img
+            src="assets/images/section-3-img-7.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="absolute right-[5%] top-[48%] w-[80px] md:right-[0%] md:top-[36%] md:w-[120px]"
+        >
+          <img
+            src="assets/images/section-3-img-8.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="absolute right-[-15%] top-[70%] w-[100px] md:right-[-18%] md:top-[50%] md:w-[200px]"
+        >
+          <img
+            src="assets/images/section-3-img-9.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="absolute right-[-10%] top-[90%] w-[100px] md:right-[15%] md:top-[75%]"
+        >
+          <img
+            src="assets/images/section-3-img-10.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="absolute right-[15%] top-[94%] hidden md:right-[2%] md:top-[68%] md:block md:w-[110px]"
+        >
+          <img
+            src="assets/images/section-3-img-11.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div
+          class="absolute right-[-10%] top-[97%] hidden md:right-[-15%] md:top-[78%] md:block md:w-[130px]"
+        >
+          <img
+            src="assets/images/section-3-img-12.png"
+            width="100%"
+            alt=""
+            role="presentation"
+          />
+        </div>
+
+        <div
+          class="mb-[80px] flex flex-col items-center justify-center md:mx-auto md:mb-[50px] md:w-[520px]"
+        >
+          <div
+            class="mb-[30px] flex flex-col items-center justify-start gap-1 md:gap-3"
+          >
+            <h2 class="linear-gradient-text section-title">交易策略</h2>
+            <span class="roboto-condensed-regular section-subtitle"
+              >NAVIGATING THE COSMOS- Strategy</span
+            >
+          </div>
+          <p class="leading-8 text-white md:text-center">
+            GTI
+            不僅是在市場中交易，而是在時間流中穿越。我們的策略如同遠征，依循數據的引力場，在量子層面進行套利計算。
+          </p>
+        </div>
+        <div
+          class="mx-auto flex flex-wrap justify-center gap-[50px] md:gap-[0px] lg:w-[70%]"
+        >
+          <div
+            class="flex w-full flex-wrap justify-center gap-[50px] md:gap-[20px]"
+          >
+            <div class="hexagon-card">
+              <img
+                src="assets/images/section-3-card-bg.png"
+                width="100%"
+                alt=""
+                role="presentation"
+              />
+              <img
+                class="hexagon-card-hover"
+                src="assets/images/section-3-card-bg-hover.png"
+                width="100%"
+                alt=""
+                role="presentation"
+              />
+              <div class="hexagon-container">
+                <div class="text-center">
+                  <h3 class="hexagon-card-title">量化套利</h3>
+                  <span class="roboto-condensed-regular hexagon-card-subtitle"
+                    >Quantum Arbitrage</span
+                  >
+                </div>
+                <p class="hexagon-card-description">
+                  透過高維數據分析，在市場時空的縫隙中找到風險最低的套利路徑。
+                </p>
+              </div>
+            </div>
+            <div class="hexagon-card">
+              <img
+                src="assets/images/section-3-card-bg.png"
+                width="100%"
+                alt=""
+                role="presentation"
+              />
+              <img
+                class="hexagon-card-hover"
+                src="assets/images/section-3-card-bg-hover.png"
+                width="100%"
+                alt=""
+                role="presentation"
+              />
+              <div class="hexagon-container">
+                <div class="text-center">
+                  <h3 class="hexagon-card-title">可轉債套利</h3>
+                  <span class="roboto-condensed-regular hexagon-card-subtitle"
+                    >Gravitational Hedging</span
+                  >
+                </div>
+                <p class="hexagon-card-description">
+                  市場波動如同黑洞擾動，重力波傳遞訊號，我們的對沖策略能精準捕捉機會。
+                </p>
+              </div>
+            </div>
+            <div class="hexagon-card">
+              <img
+                src="assets/images/section-3-card-bg.png"
+                width="100%"
+                alt=""
+                role="presentation"
+              />
+              <img
+                class="hexagon-card-hover"
+                src="assets/images/section-3-card-bg-hover.png"
+                width="100%"
+                alt=""
+                role="presentation"
+              />
+              <div class="hexagon-container">
+                <div class="text-center">
+                  <h3 class="hexagon-card-title">ETF 套利</h3>
+                  <span class="roboto-condensed-regular hexagon-card-subtitle"
+                    >Event Horizon Trading</span
+                  >
+                </div>
+                <p class="hexagon-card-description">
+                  市場事件如同事件視界，透過深度學習模型，我們解析 ETF
+                  市價與淨值的細微偏差。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex w-full flex-wrap justify-center gap-[50px] md:mt-[-40px] md:gap-[20px]"
+          >
+            <div class="hexagon-card">
+              <img
+                src="assets/images/section-3-card-bg.png"
+                width="100%"
+                alt=""
+                role="presentation"
+              />
+              <img
+                class="hexagon-card-hover"
+                src="assets/images/section-3-card-bg-hover.png"
+                width="100%"
+                alt=""
+                role="presentation"
+              />
+              <div class="hexagon-container">
+                <div class="text-center">
+                  <h3 class="hexagon-card-title">低延遲與高頻交易</h3>
+                  <span class="roboto-condensed-regular hexagon-card-subtitle"
+                    >Low latency ＆High Frequency Trading</span
+                  >
+                </div>
+                <p class="hexagon-card-description">
+                  在毫秒級的時間內，以自行開發的晶片及伺服器，在七層網路骨架的最底層中使用高頻技術穿越市場時空，捕捉最細微的價格異動。
+                </p>
+              </div>
+            </div>
+            <div class="hexagon-card">
+              <img
+                src="assets/images/section-3-card-bg.png"
+                width="100%"
+                alt=""
+                role="presentation"
+              />
+              <img
+                class="hexagon-card-hover"
+                src="assets/images/section-3-card-bg-hover.png"
+                width="100%"
+                alt=""
+                role="presentation"
+              />
+              <div class="hexagon-container">
+                <div class="text-center">
+                  <h3 class="hexagon-card-title">AI 量化分析</h3>
+                  <span class="roboto-condensed-regular hexagon-card-subtitle"
+                    >Singularity & AI Quantum Analytics</span
+                  >
+                </div>
+                <p class="hexagon-card-description">
+                  AI
+                  如同市場的奇異點，融合機器學習與深度神經網絡，創造最適的演算法逼近市場的未來軌跡。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="anchor-point-4" class="relative overflow-hidden md:h-[900px]">
+      <div class="absolute h-full w-full opacity-50">
+        <img
+          class="h-full w-full object-cover"
+          src="assets/images/section-4-bg.png"
+          width="100%"
+          alt="section-4-bg"
+        />
+      </div>
+      <div class="container md:flex md:items-center">
+        <div
+          class="mb-[80px] flex flex-col items-center justify-center md:w-[400px] md:shrink-0 md:items-start lg:w-[500px]"
+        >
+          <div
+            class="mb-[30px] flex flex-col items-center justify-start gap-1 md:items-start md:gap-3"
+          >
+            <h2 class="linear-gradient-text section-title">企業文化</h2>
+            <span class="roboto-condensed-regular section-subtitle"
+              >BEYOND DIMENSIONS- Culture</span
+            >
+          </div>
+          <p class="leading-8 text-white">
+            「我們生來不是要觀望，而是要探索。」<br />
+            GTI
+            是一場金融巡航任務，每一位團隊成員都是市場的巡航者。我們不斷向前，因為我們知道：“市場，如同宇宙，永無止境”。
+          </p>
+        </div>
+        <div
+          class="relative flex flex-wrap justify-center gap-[50px] md:h-full md:grow"
+        >
+          <div
+            class="circle-card md:left-[10%] md:top-[38%] md:w-[240px] lg:left-[14%] lg:top-[24%] lg:w-[300px]"
+          >
+            <img
+              src="assets/images/section-4-card-bg.png"
+              width="100%"
+              alt=""
+              role="presentation"
+            />
+            <img
+              class="circle-card-hover"
+              src="assets/images/section-4-card-bg-hover.png"
+              width="100%"
+              alt=""
+              role="presentation"
+            />
+            <div
+              class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-[10px] p-[40px] text-white"
+            >
+              <div class="text-center">
+                <div
+                  class="m-auto mb-[10px] h-[40px] w-[40px] md:h-[50px] md:w-[50px] lg:h-[60px] lg:w-[60px]"
+                >
+                  <img
+                    src="assets/images//section-4-icon-1.png"
+                    width="100%"
+                    alt="誠信與紀律"
+                  />
+                </div>
+                <h3 class="text-xl">誠信與紀律</h3>
+              </div>
+              <p class="text-sm">
+                在無重力的市場環境中，我們的準則如星際地圖，確保每一次決策的準確與穩健。
+              </p>
+            </div>
+          </div>
+          <div
+            class="circle-card md:right-[-13%] md:top-[0%] md:w-[230px] lg:top-[2%] lg:w-[270px]"
+          >
+            <img
+              src="assets/images/section-4-card-bg.png"
+              width="100%"
+              alt=""
+              role="presentation"
+            />
+            <img
+              class="circle-card-hover"
+              src="assets/images/section-4-card-bg-hover.png"
+              width="100%"
+              alt=""
+              role="presentation"
+            />
+            <div
+              class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-[10px] p-[40px] text-white"
+            >
+              <div class="text-center">
+                <div
+                  class="m-auto mb-[10px] h-[40px] w-[40px] md:h-[50px] md:w-[50px] lg:h-[60px] lg:w-[60px]"
+                >
+                  <img
+                    src="assets/images//section-4-icon-2.png"
+                    width="100%"
+                    alt="健康與平衡"
+                  />
+                </div>
+                <h3 class="text-xl">健康與平衡</h3>
+              </div>
+              <p class="text-sm">
+                在多維市場中求生存，唯有穩定的心態與強韌的體魄才能適應長期的金融探險。
+              </p>
+            </div>
+          </div>
+          <div
+            class="circle-card md:bottom-[-2%] md:left-[-63%] md:w-[230px] lg:bottom-[-15%] lg:left-[-20%] lg:w-[250px]"
+          >
+            <img
+              src="assets/images/section-4-card-bg.png"
+              width="100%"
+              alt=""
+              role="presentation"
+            />
+            <img
+              class="circle-card-hover"
+              src="assets/images/section-4-card-bg-hover.png"
+              width="100%"
+              alt=""
+              role="presentation"
+            />
+            <div
+              class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-[10px] p-[40px] text-white"
+            >
+              <div class="text-center">
+                <div
+                  class="m-auto mb-[10px] h-[40px] w-[40px] md:h-[50px] md:w-[50px] lg:h-[60px] lg:w-[60px]"
+                >
+                  <img
+                    src="assets/images//section-4-icon-3.png"
+                    width="100%"
+                    alt="頂尖團隊"
+                  />
+                </div>
+                <h3 class="text-xl">頂尖團隊</h3>
+              </div>
+              <p class="text-sm">
+                數學家、量化科學家、交易員如同太空人，以數據為座標，引導資本前進。
+              </p>
+            </div>
+          </div>
+          <div
+            class="circle-card md:bottom-[-12%] md:right-[-4%] md:w-[220px] lg:bottom-[0%] lg:right-[0%] lg:w-[240px]"
+          >
+            <img
+              src="assets/images/section-4-card-bg.png"
+              width="100%"
+              alt=""
+              role="presentation"
+            />
+            <img
+              class="circle-card-hover"
+              src="assets/images/section-4-card-bg-hover.png"
+              width="100%"
+              alt=""
+              role="presentation"
+            />
+            <div
+              class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-[10px] p-[40px] text-white"
+            >
+              <div class="text-center">
+                <div
+                  class="m-auto mb-[10px] h-[40px] w-[40px] md:h-[50px] md:w-[50px] lg:h-[60px] lg:w-[60px]"
+                >
+                  <img
+                    src="assets/images//section-4-icon-4.png"
+                    width="100%"
+                    alt="持續學習"
+                  />
+                </div>
+                <h3 class="text-xl">持續學習</h3>
+              </div>
+              <p class="text-sm">
+                宇宙不斷膨脹，市場亦然。我們也不斷進化，適應新的金融時空。
+              </p>
+            </div>
+          </div>
+          <div
+            class="circle-card md:left-[-50%] md:top-[-4%] md:w-[200px] lg:left-[-25%] lg:top-[-10%] lg:w-[220px]"
+          >
+            <img
+              src="assets/images/section-4-card-bg.png"
+              width="100%"
+              alt=""
+              role="presentation"
+            />
+            <img
+              class="circle-card-hover"
+              src="assets/images/section-4-card-bg-hover.png"
+              width="100%"
+              alt=""
+              role="presentation"
+            />
+            <div
+              class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-[10px] p-[40px] text-white"
+            >
+              <div class="text-center">
+                <div
+                  class="m-auto mb-[10px] h-[40px] w-[40px] md:h-[50px] md:w-[50px] lg:h-[60px] lg:w-[60px]"
+                >
+                  <img
+                    src="assets/images//section-4-icon-5.png"
+                    width="100%"
+                    alt="持續學習"
+                  />
+                </div>
+                <h3 class="text-xl">探索精神</h3>
+              </div>
+              <p class="text-sm">我們的終點，是無限的可能</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="anchor-point-5" class="relative overflow-hidden md:h-[900px]">
+      <div class="section-5-bg absolute h-full w-full opacity-50">
+        <img
+          class="h-full w-full object-cover"
+          src="assets/images/section-5-bg.png"
+          width="100%"
+          alt=""
+          role="presentation"
+        />
+      </div>
+      <div class="container md:flex md:items-center md:justify-center">
+        <div class="flex flex-col items-center justify-center md:w-[540px]">
+          <div
+            class="mb-[30px] flex flex-col items-center justify-start gap-1 md:gap-3"
+          >
+            <h2 class="linear-gradient-text section-title">關於GTI</h2>
+            <span class="roboto-condensed-regular section-subtitle"
+              >THE FUTURE OF CAPITAL</span
+            >
+          </div>
+          <p class="leading-8 text-white md:text-center">
+            GTI
+            是金融科技與量化套利的交匯點，我們的技術如同曲軸引擎，推動資本超越傳統市場的束縛，開啟全新的金融維度。我們的願景不只是套利，而是改變套利的定義——如同探索宇宙，我們不只尋找機會，我們創造機會。
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative h-[550px] overflow-hidden md:h-[700px] lg:h-[900px]"
+    >
+      <div id="anchor-point-6" class="absolute top-[-3%]"></div>
+      <div
+        class="absolute bottom-[15%] scale-125 md:left-0 md:right-0 md:mx-auto md:max-w-[1000px] md:scale-100 lg:max-w-[1400px]"
+      >
+        <img src="assets/images/section-6-bg.png" alt="section-6-bg" />
+        <div class="location-mark-group left-[26.8%] top-[49.4%]">
+          <span class="location-mark-text">芝加哥</span>
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="芝加哥位置標記"
+          />
+        </div>
+        <div class="location-mark-group left-[29%] top-[54%]">
+          <span class="location-mark-text">紐約</span>
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="紐約位置標記"
+          />
+        </div>
+        <div class="location-mark-group left-[46%] top-[46%]">
+          <span class="location-mark-text">倫敦</span>
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="倫敦位置標記"
+          />
+        </div>
+        <div class="location-mark-group left-[48.5%] top-[50%]">
+          <span class="location-mark-text">盧森堡</span>
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="盧森堡位置標記"
+          />
+        </div>
+        <div class="location-mark-group right-[22.5%] top-[54%]">
+          <span class="location-mark-text">上海</span>
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="上海位置標記"
+          />
+        </div>
+        <div class="location-mark-group right-[28.5%] top-[62%]">
+          <span class="location-mark-text">泰國</span>
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="泰國位置標記"
+          />
+        </div>
+        <div class="location-mark-group right-[26%] top-[63%]">
+          <span class="location-mark-text">越南</span>
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="越南位置標記"
+          />
+        </div>
+        <div class="location-mark-group right-[27.7%] top-[70%]">
+          <span class="location-mark-text">新加坡</span>
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="新加坡位置標記"
+          />
+        </div>
+        <div class="location-mark-group right-[24.3%] top-[60.8%]">
+          <span class="location-mark-text">香港</span>
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="香港位置標記"
+          />
+        </div>
+        <div class="location-mark-group right-[21.3%] top-[61%]">
+          <span
+            class="location-mark-text !bottom-0 !top-[unset] !translate-y-[100%]"
+            >台灣</span
+          >
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="台灣位置標記"
+          />
+        </div>
+        <div class="location-mark-group right-[20.3%] top-[56%]">
+          <span class="location-mark-text">日本</span>
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="日本位置標記"
+          />
+        </div>
+        <div class="location-mark-group right-[18.6%] top-[53.7%]">
+          <span class="location-mark-text">韓國</span>
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="韓國位置標記"
+          />
+        </div>
+        <div class="location-mark-group right-[20.6%] top-[85.7%]">
+          <span class="location-mark-text">澳洲</span>
+          <img
+            class="block"
+            width="100%"
+            src="assets/images/location-mark.png"
+            alt="澳洲位置標記"
+          />
+        </div>
+      </div>
+      <div class="container">
+        <div
+          class="mx-auto mt-[-100px] flex flex-col items-center justify-center md:w-[550px]"
+        >
+          <div class="mb-[30px] flex flex-col items-center justify-start gap-1">
+            <h2 class="linear-gradient-text linear-gradient-text section-title">
+              GTI宇宙史
+            </h2>
+            <span class="roboto-condensed-regular section-subtitle"
+              >THE ARBITRAGE ODYSSEY</span
+            >
+          </div>
+          <p class="leading-8 text-white md:text-center">
+            在市場最混亂的時期，COVID疫情開始的前不久的2018年，我們啟航，如同進入銀河深處的先鋒，經歷宇宙風暴與黑暗，在資本時空中找到穩定的航線。如今，我們在台灣可轉債市場建立影響力，並將套利探索拓展至全球市場。
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="relative overflow-hidden md:h-[900px]">
+      <div id="anchor-point-7" class="absolute top-[100px]"></div>
+
+      <div class="absolute h-full w-full">
+        <img
+          class="h-full w-full object-cover"
+          src="assets/images/section-7-bg.png"
+          width="100%"
+          alt=""
+          role="presentation"
+        />
+      </div>
+      <div class="container">
+        <div
+          class="flex flex-col items-center bg-[#1E0D22CC] px-[20px] py-[100px]"
+        >
+          <div
+            class="mb-[50px] flex flex-col items-center justify-center md:w-[540px]"
+          >
+            <div
+              class="mb-[30px] flex flex-col items-center justify-start gap-1 md:gap-3"
+            >
+              <h2 class="linear-gradient-text section-title">加入GTI</h2>
+              <span class="roboto-condensed-regular section-subtitle"
+                >BECOME A MARKET PIONEER</span
+              >
+            </div>
+            <p class="text-center leading-8 text-white">
+              如果你對市場套利充滿熱情，願意與我們一起穿越金融的時空隧道，那麼
+              GTI
+              需要你。無論你是數據科學家、交易策略師，還是人工智慧工程師，我們都歡迎你的加入。
+            </p>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <div
+              class="mb-[50px] flex flex-col items-center justify-start gap-1"
+            >
+              <h3 class="linear-gradient-text text-center text-xl">
+                加入 GTI，一起探索套利的多重宇宙與平行時空！
+              </h3>
+            </div>
+            <ul
+              class="flex flex-col items-center justify-center gap-2 border-y-[0.5px] border-white py-[10px] text-center text-white"
+            >
+              <li>應徵方式：填寫線上表單，附上你的履歷與交易經驗。</li>
+              <li>審核流程：初步篩選後，符合條件者將收到面試邀請。</li>
+              <li class="text-center">聯絡方式：recruit@gtiquant.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="linear-gradient-bg flex items-center justify-center px-2 py-4 text-sm tracking-wider md:p-6 md:text-base md:tracking-[10px]"
+    >
+      <span class="text-white"
+        >「我們的時間相對於市場，因為我們已經穿越未來。」</span
+      >
+    </footer>
+    <div
+      id="go-to-top"
+      class="fixed bottom-[40px] right-[40px] z-10 flex cursor-pointer flex-col items-center gap-3 opacity-0"
+    >
+      <img
+        src="assets/images/go-to-top-icon.png"
+        width="40px"
+        alt="go to top"
+      />
+      <span class="go-to-top-text text-white">GO TO TOP</span>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

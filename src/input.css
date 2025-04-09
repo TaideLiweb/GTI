@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @theme {
+  
+  --breakpoint-sm: initial;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: initial;
+  --breakpoint-2xl: initial;
+
+  --container-md: 80%;
+  --container-xl: 1200px;
+} */
+
+/* <weight>: Use a value from 100 to 900 */
+/* <uniquifier>: Use a unique and descriptive class name */
+
+.roboto-condensed-regular {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.roboto-condensed-black {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.linear-gradient-text {
+  background: linear-gradient(to right, #fff 0%, #9c308d 50%, #1672bb 100%);
+  background: -webkit-linear-gradient(
+    to right,
+    #fff 0%,
+    #9c308d 56%,
+    #1672bb 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+.linear-gradient-bg {
+  background: linear-gradient(to right, #9c308d 50%, #1672bb 100%);
+  background: -webkit-linear-gradient(to right, #9c308d 56%, #1672bb 100%);
+}
+
+body {
+  background-color: #1e0d22;
+}
+
+.container {
+  @apply relative mx-auto px-[20px] py-[120px] md:h-full;
+}
+
+.nav-item {
+  @apply cursor-pointer text-white transition-colors duration-300 hover:text-[#9C308D];
+}
+
+.close-btn {
+  @apply absolute right-[20px] top-[20px] h-[30px] w-[30px];
+}
+
+.close-btn::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+.close-btn::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.close-btn::before,
+.close-btn::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform-origin: center;
+}
+
+.hamburger {
+  @apply flex h-[25px] w-[30px] flex-col items-end justify-between md:hidden;
+}
+
+.mobile-menu {
+  @apply pointer-events-none fixed left-0 top-0 flex h-full w-full flex-col gap-[30px] bg-gradient-to-r from-[#6F5675] to-[#231027] px-[40px] pt-[60px] opacity-0 transition-opacity duration-300;
+}
+.mobile-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.section-title {
+  @apply text-3xl md:text-5xl;
+}
+.section-subtitle {
+  @apply text-base text-[#bbb] md:text-2xl;
+}
+
+.hexagon-card {
+  @apply relative md:w-[calc(33.33%_-_13.333px)];
+}
+.circle-card {
+  @apply relative text-center md:absolute;
+}
+
+.hexagon-card-hover,
+.circle-card-hover {
+  transition: opacity 0.3s ease-in-out;
+  @apply absolute left-0 top-0 opacity-0;
+}
+.hexagon-card:hover .hexagon-card-hover {
+  opacity: 1;
+}
+.circle-card:hover .circle-card-hover {
+  opacity: 1;
+}
+
+.hexagon-container {
+  @apply absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-[10px] px-[20px] py-[40px] text-white;
+}
+
+.hexagon-card-title {
+  @apply text-xl md:text-lg lg:text-xl;
+}
+.hexagon-card-subtitle {
+  @apply text-sm text-[#bbb] md:text-[12px] lg:text-[14px];
+}
+.hexagon-card-description {
+  @apply text-sm md:text-[12px] lg:text-[14px] lg:leading-6;
+}
+
+.location-mark-group {
+  transform: translate(-50%, calc(-50% + -200px));
+  opacity: 0;
+  @apply absolute flex w-[1.8%];
+}
+.location-mark-text {
+  @apply absolute left-[50%] top-0 translate-x-[-50%] translate-y-[-110%] whitespace-nowrap text-[9px] text-white;
+}
+
+.go-to-top-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
