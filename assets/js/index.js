@@ -74,7 +74,7 @@ window.addEventListener("load", () => {
   gsap.registerPlugin(ScrollTrigger)
 
   window.addEventListener("resize", () => {
-    ScrollTrigger.refresh()
+    ScrollTrigger.update();
   })
 
   // 火箭移動動畫
